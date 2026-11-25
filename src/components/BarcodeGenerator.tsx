@@ -52,7 +52,12 @@ const BarcodeGenerator: React.FC = () => {
 
                 // Save the PDF document and trigger the download
                 const pdfBytes = await pdfDoc.save();
-                const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+                const pdfBuffer = new ArrayBuffer(pdfBytes.byteLength);
+                new Uint8Array(pdfBuffer).set(pdfBytes);
+
+                const blob = new Blob([pdfBuffer], {
+                    type: 'application/pdf',
+                });
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
