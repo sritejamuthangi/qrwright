@@ -88,6 +88,17 @@ export function SiteFooter() {
           destinations, IP addresses, device details or personal data. Product names are used descriptively;
           QRWright is not affiliated with or endorsed by any brand mentioned on this site.
         </p>
+        <p className="mt-3 text-[11px] text-subtle">
+          Built with ❤️ by{" "}
+          <a
+            href="https://www.linkedin.com/in/sritejamuthangi/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-ink transition-colors hover:text-signal"
+          >
+            Sri Teja Muthangi
+          </a>
+        </p>
       </div>
     </footer>
   );
