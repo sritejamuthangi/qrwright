@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "Wi-Fi QR code",
     "vCard QR code",
   ],
-  authors: [{ name: site.name, url: site.url }],
+  authors: [{ name: "Sri Teja Muthangi", url: "https://linkedin.com/in/sritejamuthangi" }],
   creator: site.name,
   publisher: site.name,
   alternates: { canonical: absoluteUrl("/") },
@@ -48,6 +48,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
     googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+  },
+  verification: {
+    google: "7GFgyj3hNuBDaRPvpUKOPVaoirt9Wix0QrgsYU7zA2A",
   },
   manifest: "/manifest.webmanifest",
   icons: {
