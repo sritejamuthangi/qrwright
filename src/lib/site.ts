@@ -1,6 +1,6 @@
 const stripSlash = (s: string) => s.replace(/\/+$/, "");
 
-const siteUrl = stripSlash(process.env.NEXT_PUBLIC_SITE_URL || "https://qrcode.sritejam.com");
+const siteUrl = stripSlash(process.env.NEXT_PUBLIC_SITE_URL || "https://qrwright.sritejam.com");
 
 export const site = {
   name: "QRWright",
