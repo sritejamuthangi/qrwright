@@ -6,7 +6,7 @@ import { TEMPLATES } from "@/lib/qr/templates";
 import { decodeSvg } from "./helpers/decode";
 
 const SAMPLES = [
-  "https://qrcode.sritejam.com/r/GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBV",
+  "https://qrwright.sritejam.com/r/GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBV",
   "WIFI:T:WPA;S:Corner Cafe;P:latte-art-2026;;",
   "https://example.com/menu",
 ];

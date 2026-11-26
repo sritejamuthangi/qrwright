@@ -452,7 +452,7 @@ export function QrStudio({
               <div className="mt-3 rounded-lg border border-line bg-card p-3">
                 <p className="text-xs leading-relaxed text-muted">
                   A tracked code points to a signed short link on{" "}
-                  <span className="font-mono text-[11px]">qrcode.sritejam.com</span>. We count scans and store
+                  <span className="font-mono text-[11px]">qrwright.sritejam.com</span>. We count scans and store
                   nothing about the destination. The link cannot be edited later, and it needs this site to
                   stay online.
                 </p>

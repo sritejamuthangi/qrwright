@@ -33,8 +33,8 @@ describe("signed self-contained links", () => {
     expect(parseToken(base32Encode(bytes))).toBeNull();
     expect(parseToken("malformed!" )).toBeNull();
   });
-  it.each(["javascript:alert(1)", "http://localhost", "http://127.0.0.1", "http://2130706433", "http://10.1.2.3", "http://192.168.1.1", "http://[::1]", "http://office.local", "https://user:password@example.com", "https://qrcode.sritejam.com/r/TOKEN"])("rejects unsafe target %s", (url) => {
-    expect(checkDestination(url, ["qrcode.sritejam.com"]).ok).toBe(false);
+  it.each(["javascript:alert(1)", "http://localhost", "http://127.0.0.1", "http://2130706433", "http://10.1.2.3", "http://192.168.1.1", "http://[::1]", "http://office.local", "https://user:password@example.com", "https://qrwright.sritejam.com/r/TOKEN"])("rejects unsafe target %s", (url) => {
+    expect(checkDestination(url, ["qrwright.sritejam.com"]).ok).toBe(false);
   });
   it("allows public HTTPS and preserves fragments", () => { expect(checkDestination("https://example.com/page#section")).toEqual({ ok: true, url: "https://example.com/page#section" }); });
 });

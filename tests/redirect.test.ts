@@ -11,7 +11,7 @@ import { GET } from "@/app/r/[token]/route";
 const ua = "Mozilla/5.0 (Linux; Android 15) AppleWebKit/537.36 Chrome/130.0.0.0 Mobile Safari/537.36";
 async function request() {
   const { token } = await signToken({ kind: "url", url: "https://example.com/menu" }, await importSecret("redirect-test-secret"), 0, crypto.getRandomValues(new Uint8Array(6)));
-  return GET(new Request(`https://qrcode.sritejam.com/r/${token}`, { headers: { "user-agent": ua } }) as NextRequest, { params: Promise.resolve({ token }) });
+  return GET(new Request(`https://qrwright.sritejam.com/r/${token}`, { headers: { "user-agent": ua } }) as NextRequest, { params: Promise.resolve({ token }) });
 }
 describe("redirect availability", () => {
   beforeEach(() => { state.after.length = 0; state.getStore.mockReset(); });
@@ -35,7 +35,7 @@ describe("redirect availability", () => {
     log.mockRestore();
   });
   it("invalid signatures neither redirect nor count", async () => {
-    const response = await GET(new Request("https://qrcode.sritejam.com/r/bad") as NextRequest, { params: Promise.resolve({ token: "bad" }) });
+    const response = await GET(new Request("https://qrwright.sritejam.com/r/bad") as NextRequest, { params: Promise.resolve({ token: "bad" }) });
     expect(response.status).toBe(404); expect(state.after).toHaveLength(0);
   });
 });

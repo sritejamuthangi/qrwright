@@ -13,7 +13,7 @@ import {
 } from "@/lib/qr/types";
 import { decodeSvg, svgToPngDataUrl } from "./helpers/decode";
 
-const URL_SAMPLE = "https://qrcode.sritejam.com/qr-code-generator?utm=test";
+const URL_SAMPLE = "https://qrwright.sritejam.com/qr-code-generator?utm=test";
 const WIDTHS = [300, 560, 860];
 
 const design = (patch: Partial<QrDesign>): QrDesign => ({ ...DEFAULT_DESIGN, ...patch });

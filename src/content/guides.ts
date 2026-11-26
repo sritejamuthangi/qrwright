@@ -42,7 +42,7 @@ There are two honest options.
 
 A **Direct** code stores the content inside the pattern. Reading the pattern needs no server. Text, contacts and Wi-Fi details can be read offline; web links still need a connection and a working destination. QRWright mini pages also need this site online. The pattern has no expiry, but it cannot be edited or count scans.
 
-A **Tracked** code stores a signed QRWright short link. Scanning it forwards to your destination and adds one to an anonymous counter. You get a total and a daily graph. The destination is packed into the link itself, not stored in a database, and bots and link previews are filtered out. The tradeoff is that the code depends on \`qrcode.sritejam.com\` staying online, and it still cannot be edited after printing.
+A **Tracked** code stores a signed QRWright short link. Scanning it forwards to your destination and adds one to an anonymous counter. You get a total and a daily graph. The destination is packed into the link itself, not stored in a database, and bots and link previews are filtered out. The tradeoff is that the code depends on \`qrwright.sritejam.com\` staying online, and it still cannot be edited after printing.
 
 For anything that must survive for years — a plaque, a machine label, a tattoo, a permanent sign — choose Direct. For a campaign where the count matters, choose Tracked. The [static vs. dynamic guide](/guides/static-vs-dynamic-qr-codes) goes deeper.
 
@@ -121,7 +121,7 @@ Direct is the right choice for permanent objects: signs, plaques, machine labels
 
 ## Tracked codes
 
-A Tracked code stores a signed link on \`qrcode.sritejam.com\`. When someone scans, the server verifies the signature, redirects immediately, and then counts the scan in the background. The destination is inside the signed link, not in a database.
+A Tracked code stores a signed link on \`qrwright.sritejam.com\`. When someone scans, the server verifies the signature, redirects immediately, and then counts the scan in the background. The destination is inside the signed link, not in a database.
 
 **Strengths**
 

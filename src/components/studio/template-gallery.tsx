@@ -8,7 +8,7 @@ import { TEMPLATE_CATEGORIES, TEMPLATES, type QrTemplate } from "@/lib/qr/templa
 import type { QrDesign } from "@/lib/qr/types";
 import { cn } from "@/lib/cn";
 
-const SAMPLE = "https://qrcode.sritejam.com";
+const SAMPLE = "https://qrwright.sritejam.com";
 
 function TemplateThumb({ template }: { template: QrTemplate }) {
   const svg = useMemo(() => {

@@ -1,6 +1,6 @@
 # QRWright
 
-Free, local-first QR and barcode workshop for `https://qrcode.sritejam.com`.
+Free, local-first QR and barcode workshop for `https://qrwright.sritejam.com`.
 
 - 20 QR types, 36 decode-tested design templates, 18 barcode formats
 - Colors, gradients, shapes, logos, frames and real browser scan checks
@@ -35,15 +35,15 @@ Browser checks start a temporary production server on port 3100 with an isolated
 
 ## Zero-cost deployment
 
-This project has no billing integration or paid dependency. Keep the existing `qrcode.sritejam.com` subdomain; no new domain is needed. Deployment still needs the owner's hosting account, DNS access and free count database credentials. No account or deployment is created by this repository.
+This project has no billing integration or paid dependency. Keep the existing `qrwright.sritejam.com` subdomain; no new domain is needed. Deployment still needs the owner's hosting account, DNS access and free count database credentials. No account or deployment is created by this repository.
 
 1. Use an eligible free Next.js hosting plan (the intended target is Vercel Hobby) and a Turso free database. Stay on free plans; do not enable paid upgrades or usage-based billing. Review the host's current eligibility and quotas before publishing. Vercel Hobby has restrictions on commercial hosting; the tool allowing commercial exports is a separate matter.
 2. Push this repository to your Git provider and import it into the hosting dashboard. Framework: Next.js. Install: `npm ci`. Build: `npm run build`.
-3. Set the variables from `.env.example`. Keep the two public URL values at `https://qrcode.sritejam.com` for the production build. Public environment variables are baked into client bundles and need a rebuild when changed.
+3. Set the variables from `.env.example`. Keep the two public URL values at `https://qrwright.sritejam.com` for the production build. Public environment variables are baked into client bundles and need a rebuild when changed.
 4. Generate `TOKEN_SECRET` and `CRON_SECRET` with 32 random bytes each. Store them as server-only environment variables. Never prefix secrets with `NEXT_PUBLIC_`.
 5. Set `TURSO_DATABASE_URL` and `TURSO_AUTH_TOKEN`. The application creates `scan_totals` and `scan_daily` on first use. No destination table exists.
 6. Configure a real public contact email or GitHub URL. Without either, Contact honestly says no channel is configured.
-7. Add `qrcode.sritejam.com` in the host's domain settings and apply the DNS record the host supplies in the existing domain's DNS zone. Wait for HTTPS validation.
+7. Add `qrwright.sritejam.com` in the host's domain settings and apply the DNS record the host supplies in the existing domain's DNS zone. Wait for HTTPS validation.
 8. Deploy and verify QR downloads, `/sitemap.xml`, a fresh tracked redirect and its daily count. Do not print production Tracked codes until the domain and signing keys are final.
 
 The daily Vercel cron in `vercel.json` calls the authenticated prune endpoint. `CRON_SECRET` is required in production. Other hosts can call it with `Authorization: Bearer <CRON_SECRET>`. Redirects also occasionally prune old daily rows. A cron does not promise exact deletion at the 90-day boundary during outages.
